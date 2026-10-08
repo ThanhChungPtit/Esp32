@@ -1,0 +1,2 @@
+source D:/ESP_IDF/Code/HeThongCamBien_BanChinh/build/bootloader/gdbinit/symbols
+source D:/ESP_IDF/Code/HeThongCamBien_BanChinh/build/bootloader/gdbinit/connect

@@ -1,0 +1,513 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\HeThongCamBien_BanChinh\build\sensor_system.elf D:\ESP_IDF\Code\HeThongCamBien_BanChinh\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 20 2026 12:30:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20d44h (134468) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=00030d6c vaddr=3ffb0000 size=047d0h ( 18384) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=00035544 vaddr=40080000 size=0aad4h ( 43732) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a26e0h (665312) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e2708 vaddr=4008aad4 size=10a50h ( 68176) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f3160 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (435) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (445) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     sensor_system[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Apr 20 2026 12:26:36[0m
+[0;32mI (462) app_init: ELF file SHA256:  83301d04e...[0m
+[0;32mI (466) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (474) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB91E8 len 00026E18 (155 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 4009B524 len 00004ADC (18 KiB): IRAM[0m
+[0;33mW (516) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (528) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (546) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (2597) wifi:wifi driver task: 3ffc11ac, prio:23, stack:6656, core=0[0m
+[0;32mI (2607) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (2607) wifi:wifi certification version: v7.0[0m
+[0;32mI (2607) wifi:config NVS flash: enabled[0m
+[0;32mI (2607) wifi:config nano formatting: disabled[0m
+[0;32mI (2617) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2617) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2617) wifi:Init management short buffer num: 32[0m
+[0;32mI (2627) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2627) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2637) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2637) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2647) wifi_init: rx ba win: 6[0m
+[0;32mI (2647) wifi_init: accept mbox: 6[0m
+[0;32mI (2647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2647) wifi_init: udp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2657) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2667) wifi_init: tcp mss: 1440[0m
+[0;32mI (2667) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2667) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2677) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (2757) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (2787) wifi:mode : sta (28:56:2f:49:6b:10)[0m
+[0;32mI (2787) wifi:enable tsf[0m
+[0;32mI (2787) SERVER: wifi_init_sta finished.[0m
+[0;32mI (2787) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (2807) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2807) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2817) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2827) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2887) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = 06:ea:36:f7:dc:b5[0m
+[0;32mI (2887) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (2887) wifi:pm start, type: 1[0m
+
+[0;32mI (2887) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3047) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3947) esp_netif_handlers: sta ip: 172.20.10.7, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (3947) SERVER: Got IP: 172.20.10.7[0m
+[0;32mI (5717) wifi:<ba-add>idx:0 (ifx:0, 06:ea:36:f7:dc:b5), tid:0, ssn:2, winSize:64[0m
+[1;31mE (7967) LCD_TASK: bat dau[0m
+[1;31mE (7967) GATE_TASK: bat dau[0m
+[0;32mI (7967) LCD_TASK: Received: L1='s1:-1 s2:-1 s3:-' L2='0.0C, 0.0%'[0m
+[0;32mI (7967) DISPLAY: Sent: s1:-1 s2:-1 s3:-|0.0C, 0.0%[0m
+[1;31mE (7967) RFID_TASK: bat dau[0m
+[1;31mE (7967) ENVIRONMENT_TASK: bat dau[0m
+[1;31mE (7967) PARKING_TASK: bat dau[0m
+[0;32mI (7967) main_task: Returned from app_main()[0m
+[0;32mI (8687) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8707) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='0.0C, 0.0%'[0m
+[0;32mI (8707) DISPLAY: Sent: s1:1 s2:1 s3:1|0.0C, 0.0%[0m
+[0;32mI (10017) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (10027) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (12047) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (12057) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (14077) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (14087) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (16117) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (16117) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (18137) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (18147) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (20167) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (20177) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (22207) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (22207) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (24227) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (24227) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (26247) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (26247) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (28287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (28287) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (30307) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 69.0%'[0m
+[0;32mI (30317) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 69.0%[0m
+[0;32mI (32337) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 75.0%'[0m
+[0;32mI (32347) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 75.0%[0m
+[0;32mI (34367) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 79.0%'[0m
+[0;32mI (34377) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 79.0%[0m
+[0;32mI (36397) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 81.0%'[0m
+[0;32mI (36407) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 81.0%[0m
+[0;32mI (38427) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 82.0%'[0m
+[0;32mI (38437) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 82.0%[0m
+[0;32mI (40457) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 83.0%'[0m
+[0;32mI (40467) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 83.0%[0m
+[0;32mI (42487) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 84.0%'[0m
+[0;32mI (42497) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 84.0%[0m
+[0;32mI (44517) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 85.0%'[0m
+[0;32mI (44517) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 85.0%[0m
+[0;32mI (46547) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 85.0%'[0m
+[0;32mI (46547) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 85.0%[0m
+[0;32mI (50597) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 77.0%'[0m
+[0;32mI (50607) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 77.0%[0m
+[0;32mI (52627) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 74.0%'[0m
+[0;32mI (52627) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 74.0%[0m
+[0;32mI (54647) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 72.0%'[0m
+[0;32mI (54657) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 72.0%[0m
+[0;32mI (56677) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 69.0%'[0m
+[0;32mI (56687) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 69.0%[0m
+[0;32mI (58707) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 68.0%'[0m
+[0;32mI (58717) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 68.0%[0m
+[0;32mI (60737) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 67.0%'[0m
+[0;32mI (60747) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 67.0%[0m
+[0;32mI (62767) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 67.0%'[0m
+[0;32mI (62777) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 67.0%[0m
+[0;32mI (64807) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (64807) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (66827) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (66837) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (68857) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (68867) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (70897) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (70897) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (72917) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (72917) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (74957) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (74957) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (76987) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (76987) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (79007) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (79017) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (81037) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (81047) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (83067) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (83077) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (85097) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (85107) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (87137) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (87137) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (89157) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (89167) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (91187) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (91187) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (93227) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (93227) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (95247) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (95257) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (97287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (97287) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (99307) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (99317) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (101337) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (101347) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (103367) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (103377) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (105397) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (105397) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (107427) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (107427) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (109467) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (109467) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (111497) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (111497) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (113517) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (113527) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (115557) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (115557) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (117577) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (117577) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (119597) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (119597) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (121637) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (121637) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (123657) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (123667) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (125687) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (125697) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (127717) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (127727) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (129747) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (129757) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (131777) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (131777) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (133797) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (133797) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (135837) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (135837) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (137857) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (137857) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (139887) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (139897) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (141917) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (141927) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (143957) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (143957) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (145977) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (145987) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (148007) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (148017) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (150037) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (150047) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (152067) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (152077) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (154097) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (154097) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (156117) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (156117) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (158147) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (158157) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (160177) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (160177) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (162197) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (162207) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (164237) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (164237) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (166257) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (166267) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (168287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (168297) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (170317) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (170327) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (172347) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (172357) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (174377) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (174377) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (176407) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (176407) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (178437) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (178447) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (180467) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (180477) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (182497) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (182507) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (184527) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (184537) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (186567) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (186567) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (188587) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (188587) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (190617) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (190627) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (192647) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (192657) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (194677) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (194677) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (196697) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (196707) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (198727) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (198737) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (200757) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (200757) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (202787) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (202787) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (204817) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (204827) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (206847) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (206857) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (208887) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (208887) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (210907) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (210917) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (212947) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (212947) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (214967) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (214977) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (216997) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (217007) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (219027) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (219027) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (221057) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (221067) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (223087) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (223097) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (225117) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (225127) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (227147) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (227157) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (229177) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (229187) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (231207) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (231217) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (233237) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (233237) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (235257) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (235267) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (237287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (237297) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (239317) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (239317) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (241337) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (241337) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (243367) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (243377) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (245397) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (245407) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (247427) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (247437) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (249457) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (249467) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (251487) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (251497) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (253517) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (253517) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (255547) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (255547) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (257577) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (257577) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (259597) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (259607) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (261627) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (261637) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (263667) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (263667) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (265687) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (265697) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (267717) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (267727) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (269747) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (269747) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (271777) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (271787) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (275837) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (275837) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (277857) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (277867) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (279887) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (279897) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (281917) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (281927) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (283947) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (283957) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (285977) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (285987) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (288007) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (288007) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (290037) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (290037) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (292057) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (292067) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (294087) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (294097) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (296127) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (296127) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (298147) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (298147) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (300167) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (300177) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (302197) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (302207) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (304227) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (304237) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (306257) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (306257) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (308287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (308297) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (310317) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (310327) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (312347) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (312357) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (314377) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (314387) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (316407) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (316417) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (318437) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (318447) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (320467) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (320477) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (322497) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (322507) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (324527) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (324537) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (326557) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (326567) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (328587) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (328597) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (330617) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (330617) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (332637) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (332637) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (334657) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (334657) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (338697) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (338707) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (340727) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (340737) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (342757) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (342767) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (344787) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (344787) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (346817) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (346817) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (348837) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (348837) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (350857) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (350867) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (352887) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (352897) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (354917) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (354927) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (356947) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (356957) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (358977) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (358987) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (361007) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (361007) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (363027) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (363027) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (365047) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (365047) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (367067) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 66.0%'[0m
+[0;32mI (367077) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 66.0%[0m
+[0;32mI (369097) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (369107) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (371127) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (371137) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (373157) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (373167) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (375187) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (375187) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (377207) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (377207) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (379227) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (379237) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (381257) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (381267) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (383287) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (383297) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (385317) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (385327) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (387347) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (387357) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (389377) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (389387) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (391407) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (391417) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (393437) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (393437) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (395457) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (395467) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (397487) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (397497) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (399517) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (399527) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (401547) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (401557) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (403577) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (403587) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (405607) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (405617) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (407637) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (407647) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (409667) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (409677) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (411697) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (411697) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (413717) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (413717) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (415737) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (415747) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (417767) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (417777) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (419797) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (419807) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m
+[0;32mI (421827) LCD_TASK: Received: L1='s1:1 s2:1 s3:1' L2='29.0C, 65.0%'[0m
+[0;32mI (421837) DISPLAY: Sent: s1:1 s2:1 s3:1|29.0C, 65.0%[0m

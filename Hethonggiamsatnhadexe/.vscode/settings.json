@@ -1,0 +1,9 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\PC\\Downloads\\org.eclipse.paho.client.mqttv3-1.2.5.jar"
+  ],
+  "idf.currentSetup": "C:\\esp\\v5.5.3\\esp-idf",
+  "idf.portWin": "COM8",
+  "idf.flashType": "UART"
+}

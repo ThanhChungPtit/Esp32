@@ -1,0 +1,617 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\HeThongCamBien_BanChinh\build\sensor_system.elf D:\ESP_IDF\Code\HeThongCamBien_BanChinh\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM4'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 20 2026 12:30:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20d34h (134452) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=00030d5c vaddr=3ffb0000 size=047d0h ( 18384) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=00035534 vaddr=40080000 size=0aae4h ( 43748) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a27a0h (665504) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e27c8 vaddr=4008aae4 size=10a40h ( 68160) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f3210 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (435) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (444) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (445) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     sensor_system[0m
+[0;32mI (454) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Apr 20 2026 12:26:36[0m
+[0;32mI (462) app_init: ELF file SHA256:  ceb3668d2...[0m
+[0;32mI (466) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (474) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB91E8 len 00026E18 (155 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 4009B524 len 00004ADC (18 KiB): IRAM[0m
+[0;33mW (516) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (528) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (546) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (2597) wifi:wifi driver task: 3ffc1128, prio:23, stack:6656, core=0[0m
+[0;32mI (2607) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (2607) wifi:wifi certification version: v7.0[0m
+[0;32mI (2607) wifi:config NVS flash: enabled[0m
+[0;32mI (2607) wifi:config nano formatting: disabled[0m
+[0;32mI (2617) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2617) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2617) wifi:Init management short buffer num: 32[0m
+[0;32mI (2627) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2627) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2637) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2637) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2647) wifi_init: rx ba win: 6[0m
+[0;32mI (2647) wifi_init: accept mbox: 6[0m
+[0;32mI (2647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2647) wifi_init: udp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2657) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2667) wifi_init: tcp mss: 1440[0m
+[0;32mI (2667) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2667) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2677) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (2767) wifi:mode : sta (28:56:2f:49:6b:10)[0m
+[0;32mI (2767) wifi:enable tsf[0m
+[0;32mI (2767) SERVER: wifi_init_sta finished.[0m
+[0;32mI (2767) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (2787) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2787) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2797) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2807) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2867) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = a2:dc:ee:65:d0:e3[0m
+[0;32mI (2867) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (2877) wifi:pm start, type: 1[0m
+
+[0;32mI (2877) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2937) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4497) esp_netif_handlers: sta ip: 172.20.10.7, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4497) SERVER: Got IP: 172.20.10.7[0m
+[0;32mI (7787) wifi:<ba-add>idx:0 (ifx:0, a2:dc:ee:65:d0:e3), tid:0, ssn:2, winSize:64[0m
+[1;31mE (7937) LCD_TASK: bat dau[0m
+[1;31mE (7937) GATE_TASK: bat dau[0m
+[1;31mE (7937) RFID_TASK: bat dau[0m
+[0;32mI (7937) LCD_TASK: Received: L1='s1:-1 s2:-1 s3:-' L2='0.0C, 0.0%'[0m
+[0;32mI (7937) DISPLAY: Sent: s1:-1 s2:-1 s3:-|0.0C, 0.0%[0m
+[0;32mI (7937) ENVIRONMENT_TASK: Bat dau[0m
+[1;31mE (7937) PARKING_TASK: bat dau[0m
+[0;32mI (7947) main_task: Returned from app_main()[0m
+[0;32mI (8697) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8707) LCD_TASK: Received: L1='s1:-1 s2:-1 s3:-' L2='29.0C, 76.0%'[0m
+[0;32mI (8707) DISPLAY: Sent: s1:-1 s2:-1 s3:-|29.0C, 76.0%[0m
+[0;32mI (8707) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (8717) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (8737) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (20517) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (20517) DISPLAY: Sent: s1:1 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (26617) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (26617) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (29017) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (29017) DISPLAY: Sent: s1:1 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (31817) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (31817) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (89417) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (89417) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (107717) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (107717) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 20 2026 12:30:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20d34h (134452) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=00030d5c vaddr=3ffb0000 size=047d0h ( 18384) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=00035534 vaddr=40080000 size=0aae4h ( 43748) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a27a0h (665504) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e27c8 vaddr=4008aae4 size=10a40h ( 68160) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f3210 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (435) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (445) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     sensor_system[0m
+[0;32mI (454) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Apr 20 2026 12:26:36[0m
+[0;32mI (462) app_init: ELF file SHA256:  ceb3668d2...[0m
+[0;32mI (466) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (474) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB91E8 len 00026E18 (155 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 4009B524 len 00004ADC (18 KiB): IRAM[0m
+[0;33mW (516) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (528) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (546) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (2597) wifi:wifi driver task: 3ffc1128, prio:23, stack:6656, core=0[0m
+[0;32mI (2607) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (2607) wifi:wifi certification version: v7.0[0m
+[0;32mI (2607) wifi:config NVS flash: enabled[0m
+[0;32mI (2607) wifi:config nano formatting: disabled[0m
+[0;32mI (2617) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2617) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2617) wifi:Init management short buffer num: 32[0m
+[0;32mI (2627) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2627) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2637) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2637) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2647) wifi_init: rx ba win: 6[0m
+[0;32mI (2647) wifi_init: accept mbox: 6[0m
+[0;32mI (2647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2647) wifi_init: udp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2657) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2667) wifi_init: tcp mss: 1440[0m
+[0;32mI (2667) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2667) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2677) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (2767) wifi:mode : sta (28:56:2f:49:6b:10)[0m
+[0;32mI (2767) wifi:enable tsf[0m
+[0;32mI (2777) SERVER: wifi_init_sta finished.[0m
+[0;32mI (2777) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (2787) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2787) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2877) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2927) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2987) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (2997) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2997) SERVER: Disconnected, retrying...[0m
+[0;32mI (3017) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3017) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3027) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3047) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3087) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = a2:dc:ee:65:d0:e3[0m
+[0;32mI (3087) wifi:security: WPA2-PSK, phy: bgn, rssi: -47[0m
+[0;32mI (3097) wifi:pm start, type: 1[0m
+
+[0;32mI (3097) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3147) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4397) esp_netif_handlers: sta ip: 172.20.10.7, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (4397) SERVER: Got IP: 172.20.10.7[0m
+[0;32mI (7787) wifi:<ba-add>idx:0 (ifx:0, a2:dc:ee:65:d0:e3), tid:0, ssn:2, winSize:64[0m
+[1;31mE (7947) LCD_TASK: bat dau[0m
+[1;31mE (7947) GATE_TASK: bat dau[0m
+[0;32mI (7947) LCD_TASK: Received: L1='s1:-1 s2:-1 s3:-' L2='0.0C, 0.0%'[0m
+[0;32mI (7947) DISPLAY: Sent: s1:-1 s2:-1 s3:-|0.0C, 0.0%[0m
+[1;31mE (7947) RFID_TASK: bat dau[0m
+[0;32mI (7947) ENVIRONMENT_TASK: Bat dau[0m
+[1;31mE (7947) PARKING_TASK: bat dau[0m
+[0;32mI (7947) main_task: Returned from app_main()[0m
+[0;32mI (15247) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (15257) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='0.0C, 0.0%'[0m
+[0;32mI (15257) DISPLAY: Sent: s1:0 s2:1 s3:0|0.0C, 0.0%[0m
+[0;32mI (16057) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (16067) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (16067) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (23367) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (23367) DISPLAY: Sent: s1:1 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (27367) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (27367) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (36467) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (36467) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (40267) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (40267) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (48367) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (48367) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (50767) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (50767) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (62467) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (62467) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (73267) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (73267) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (81067) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (81067) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (85567) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (85567) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (103467) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (103467) DISPLAY: Sent: s1:1 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (111767) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (111767) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (113027) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 77.0%'[0m
+[0;32mI (113037) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 77.0%[0m
+[0;32mI (113037) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (117077) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (117077) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (117077) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (127187) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (127197) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (127197) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (152567) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (152567) DISPLAY: Sent: s1:1 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (158367) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (158367) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (175767) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='30.0C, 75.0%'[0m
+[0;32mI (175767) DISPLAY: Sent: s1:0 s2:1 s3:1|30.0C, 75.0%[0m
+[0;32mI (179967) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (179967) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (185467) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (185467) DISPLAY: Sent: s1:1 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (189767) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (189767) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (205167) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (205167) DISPLAY: Sent: s1:1 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (208667) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (208667) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (216077) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (216077) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (216077) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (216767) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (216767) DISPLAY: Sent: s1:1 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (222167) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (222167) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (236077) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (236077) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/control[0m
+[0;32mI (236077) MAIN: N?i dung: 1 (len=1)[0m
+[0;32mI (236077) MQTT: Da day lenh MO CONG 1 vao Queue[0m
+[0;32mI (237477) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (237477) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (239647) GATE_TASK: Da mo cong 1[0m
+[0;32mI (242587) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (242587) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/control[0m
+[0;32mI (242587) MAIN: N?i dung: 2 (len=1)[0m
+[0;32mI (242587) MQTT: Da day lenh MO CONG 2 vao Queue[0m
+[0;32mI (244307) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (244307) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (247207) GATE_TASK: Da tu dong dong cong 1 sau 4000 ms[0m
+[0;32mI (247207) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (247207) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (250787) GATE_TASK: Da mo cong 2[0m
+[0;32mI (258347) GATE_TASK: Da tu dong dong cong 2 sau 4000 ms[0m
+[0;32mI (258347) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (258347) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (278867) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (278867) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (278877) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (334447) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (334447) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (338647) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (338647) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (406147) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 77.0%'[0m
+[0;32mI (406157) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 77.0%[0m
+[0;32mI (406157) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (491157) LCD_TASK: Received: L1='s1:1 s2:1 s3:0' L2='29.0C, 77.0%'[0m
+[0;32mI (491157) DISPLAY: Sent: s1:1 s2:1 s3:0|29.0C, 77.0%[0m
+[0;32mI (500257) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 77.0%'[0m
+[0;32mI (500257) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 77.0%[0m
+[0;32mI (513217) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 80.0%'[0m
+[0;32mI (513227) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 80.0%[0m
+[0;32mI (513227) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (531407) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 74.0%'[0m
+[0;32mI (531407) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 74.0%[0m
+[0;32mI (531417) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (567777) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (567777) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (567787) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (598457) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (598457) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/control[0m
+[0;32mI (598457) MAIN: N?i dung: 1 (len=1)[0m
+[0;32mI (598457) MQTT: Da day lenh MO CONG 1 vao Queue[0m
+[0;32mI (600187) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (600187) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (602047) GATE_TASK: Da mo cong 1[0m
+[0;32mI (609607) GATE_TASK: Da tu dong dong cong 1 sau 4000 ms[0m
+[0;32mI (609607) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 75.0%'[0m
+[0;32mI (609607) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 75.0%[0m
+[0;32mI (614327) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (614327) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (614327) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (652717) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='15.0C, 38.0%'[0m
+[0;32mI (652717) DISPLAY: Sent: s1:0 s2:1 s3:0|15.0C, 38.0%[0m
+[0;32mI (652717) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+Guru Meditation Error: Core  1 panic'ed (LoadStoreAlignment). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x40088b9a  PS      : 0x00060a33  A0      : 0x8008be95  A1      : 0x3ffcf0f0  
+A2      : 0x3ffcabab  A3      : 0xb33fffff  A4      : 0x0000abab  A5      : 0x00060c23  
+A6      : 0x3ffb0405  A7      : 0x0000abab  A8      : 0x3ffb4d60  A9      : 0x00060023  
+A10     : 0x00000001  A11     : 0x00000001  A12     : 0x8008c025  A13     : 0x3ffcdda0  
+A14     : 0x00000003  A15     : 0x00060023  SAR     : 0x0000000a  EXCCAUSE: 0x00000009  
+EXCVADDR: 0x3ffcabab  LBEG    : 0x40001699  LEND    : 0x400016aa  LCOUNT  : 0xfffffff1  
+
+
+Backtrace: 0x40088b97:0x3ffcf0f0 0x4008be92:0x3ffcf110 0x4008b69b:0x3ffcf140 0x400d92c6:0x3ffcf180 0x400d98b4:0x3ffcf1d0 0x4008bcc5:0x3ffcf250
+
+
+
+
+ELF file SHA256: ceb3668d2
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 20 2026 12:30:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20d34h (134452) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=00030d5c vaddr=3ffb0000 size=047d0h ( 18384) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=00035534 vaddr=40080000 size=0aae4h ( 43748) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a27a0h (665504) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e27c8 vaddr=4008aae4 size=10a40h ( 68160) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f3210 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+I (424) boot: Disabling RNG early entropy source...
+[0;32mI (435) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (445) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     sensor_system[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Apr 20 2026 12:26:36[0m
+[0;32mI (462) app_init: ELF file SHA256:  ceb3668d2...[0m
+[0;32mI (466) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (474) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB91E8 len 00026E18 (155 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 4009B524 len 00004ADC (18 KiB): IRAM[0m
+[0;33mW (516) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (546) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (2597) wifi:wifi driver task: 3ffc1128, prio:23, stack:6656, core=0[0m
+[0;32mI (2607) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (2607) wifi:wifi certification version: v7.0[0m
+[0;32mI (2607) wifi:config NVS flash: enabled[0m
+[0;32mI (2607) wifi:config nano formatting: disabled[0m
+[0;32mI (2617) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2617) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2617) wifi:Init management short buffer num: 32[0m
+[0;32mI (2627) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2627) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2637) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2637) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2647) wifi_init: rx ba win: 6[0m
+[0;32mI (2647) wifi_init: accept mbox: 6[0m
+[0;32mI (2647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2647) wifi_init: udp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp mbox: 6[0m
+[0;32mI (2657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2657) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2667) wifi_init: tcp mss: 1440[0m
+[0;32mI (2667) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2667) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2677) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (2767) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (2827) wifi:mode : sta (28:56:2f:49:6b:10)[0m
+[0;32mI (2827) wifi:enable tsf[0m
+[0;32mI (2827) SERVER: wifi_init_sta finished.[0m
+[0;32mI (2827) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (2837) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2847) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2857) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2897) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (7827) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7827) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (7827) mqtt_client: Error transport connect[0m
+[1;31mE (7837) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (7837) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[1;31mE (8027) LCD_TASK: bat dau[0m
+[1;31mE (8027) GATE_TASK: bat dau[0m
+[0;32mI (8027) DISPLAY: Sent: s1:-1 s2:-1 s3:-|0.0C, 0.0%[0m
+[0;32mI (8027) LCD_TASK: Received: L1='s1:-1 s2:-1 s3:-' L2='0.0C, 0.0%'[0m
+[1;31mE (8027) RFID_TASK: bat dau[0m
+[0;32mI (8027) ENVIRONMENT_TASK: Bat dau[0m
+[1;31mE (8027) PARKING_TASK: bat dau[0m
+[0;32mI (8027) main_task: Returned from app_main()[0m
+[0;32mI (8037) DISPLAY: Sent: s1:0 s2:1 s3:0|0.0C, 0.0%[0m
+[0;32mI (8057) DISPLAY: Sent: s1:0 s2:1 s3:0|30.0C, 76.0%[0m
+[0;32mI (8057) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (8067) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='0.0C, 0.0%'[0m
+[0;32mI (8097) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='30.0C, 76.0%'[0m
+[0;32mI (10077) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 77.0%'[0m
+[0;32mI (10077) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 77.0%[0m
+[0;32mI (10077) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (12897) wifi:state: run -> init (0xcc00)[0m
+[0;32mI (12907) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12907) SERVER: Disconnected, retrying...[0m
+[0;32mI (12967) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12967) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (12987) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (12997) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (13067) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = a2:dc:ee:65:d0:e3[0m
+[0;32mI (13067) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (13077) wifi:pm start, type: 1[0m
+
+[0;32mI (13077) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (13087) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (14607) esp_netif_handlers: sta ip: 172.20.10.7, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (14607) SERVER: Got IP: 172.20.10.7[0m
+[0;32mI (22867) wifi:<ba-add>idx:0 (ifx:0, a2:dc:ee:65:d0:e3), tid:0, ssn:2, winSize:64[0m
+[0;32mI (31057) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (66847) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 77.0%'[0m
+[0;32mI (66847) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 77.0%[0m
+[0;32mI (71047) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 77.0%'[0m
+[0;32mI (71047) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 77.0%[0m
+[0;32mI (137357) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (137357) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (137367) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (200047) LCD_TASK: Received: L1='s1:0 s2:1 s3:1' L2='29.0C, 76.0%'[0m
+[0;32mI (200047) DISPLAY: Sent: s1:0 s2:1 s3:1|29.0C, 76.0%[0m
+[0;32mI (205047) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (205047) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (228267) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 75.0%'[0m
+[0;32mI (228277) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 75.0%[0m
+[0;32mI (228277) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (230297) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 76.0%'[0m
+[0;32mI (230307) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 76.0%[0m
+[0;32mI (230307) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (238387) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 75.0%'[0m
+[0;32mI (238387) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 75.0%[0m
+[0;32mI (238397) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (264657) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 74.0%'[0m
+[0;32mI (264667) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 74.0%[0m
+[0;32mI (264667) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (296987) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='29.0C, 73.0%'[0m
+[0;32mI (296987) DISPLAY: Sent: s1:0 s2:1 s3:0|29.0C, 73.0%[0m
+[0;32mI (296997) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (357597) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 72.0%'[0m
+[0;32mI (357597) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 72.0%[0m
+[0;32mI (357607) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (458617) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 71.0%'[0m
+[0;32mI (458617) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 71.0%[0m
+[0;32mI (458627) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (494987) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 70.0%'[0m
+[0;32mI (494987) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 70.0%[0m
+[0;32mI (494987) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (561657) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (561667) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (561667) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
+[0;32mI (596067) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (596067) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (596067) MAIN: N?i dung: O1 (len=2)[0m
+[0;32mI (596067) MQTT: Emergency: Mo cong vao (O1)[0m
+[0;32mI (597407) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (597407) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (597407) MAIN: N?i dung: O2 (len=2)[0m
+[0;32mI (597407) MQTT: Emergency: Mo cong ra (O2)[0m
+[0;32mI (599647) GATE_TASK: Da mo cong 1[0m
+[0;32mI (599647) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (599647) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (603227) GATE_TASK: Da mo cong 2[0m
+[0;32mI (603227) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (603227) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (609947) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (609947) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (609947) MAIN: N?i dung: C2 (len=2)[0m
+[0;32mI (609947) MQTT: Emergency: Dong cong ra (C2)[0m
+[0;32mI (609957) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (609957) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (609957) MAIN: N?i dung: O2 (len=2)[0m
+[0;32mI (609967) MQTT: Emergency: Mo cong ra (O2)[0m
+[0;32mI (611727) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (611727) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (611727) MAIN: N?i dung: C1 (len=2)[0m
+[0;32mI (611727) MQTT: Emergency: Dong cong vao (C1)[0m
+[0;32mI (613527) GATE_TASK: Da dong cong 2[0m
+[0;32mI (613527) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (613527) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (613987) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (613987) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (613987) MAIN: N?i dung: C2 (len=2)[0m
+[0;32mI (613987) MQTT: Emergency: Dong cong ra (C2)[0m
+[0;32mI (617127) GATE_TASK: Da mo cong 2[0m
+[0;32mI (617127) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (617127) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (620707) GATE_TASK: Da dong cong 1[0m
+[0;32mI (620707) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (620707) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (624287) GATE_TASK: Da dong cong 2[0m
+[0;32mI (624287) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (624287) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (631077) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (631077) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (631077) MAIN: N?i dung: O2 (len=2)[0m
+[0;32mI (631087) MQTT: Emergency: Mo cong ra (O2)[0m
+[0;32mI (632927) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (632927) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (632927) MAIN: N?i dung: O1 (len=2)[0m
+[0;32mI (632927) MQTT: Emergency: Mo cong vao (O1)[0m
+[0;32mI (634647) GATE_TASK: Da mo cong 2[0m
+[0;32mI (634647) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (634647) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (638227) GATE_TASK: Da mo cong 1[0m
+[0;32mI (638227) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (638227) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (642917) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (642917) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (642917) MAIN: N?i dung: C1 (len=2)[0m
+[0;32mI (642917) MQTT: Emergency: Dong cong vao (C1)[0m
+[0;32mI (644907) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (644907) MAIN: Nh?n d? li?u t? Topic: /ptit/servo/emergency[0m
+[0;32mI (644907) MAIN: N?i dung: C2 (len=2)[0m
+[0;32mI (644907) MQTT: Emergency: Dong cong ra (C2)[0m
+[0;32mI (646487) GATE_TASK: Da dong cong 1[0m
+[0;32mI (646487) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (646487) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (650067) GATE_TASK: Da dong cong 2[0m
+[0;32mI (650067) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 69.0%'[0m
+[0;32mI (650067) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 69.0%[0m
+[0;32mI (655027) LCD_TASK: Received: L1='s1:0 s2:1 s3:0' L2='28.0C, 68.0%'[0m
+[0;32mI (655027) DISPLAY: Sent: s1:0 s2:1 s3:0|28.0C, 68.0%[0m
+[0;32mI (655037) DISPLAY: Gia tri thay doi -> Cap nhat LCD[0m
